@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessProjectD3", "FitnessProjectD3\FitnessProjectD3.csproj", "{835A3BF0-ABC9-4018-8469-1C6C43489ACB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{835A3BF0-ABC9-4018-8469-1C6C43489ACB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{835A3BF0-ABC9-4018-8469-1C6C43489ACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{835A3BF0-ABC9-4018-8469-1C6C43489ACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{835A3BF0-ABC9-4018-8469-1C6C43489ACB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
