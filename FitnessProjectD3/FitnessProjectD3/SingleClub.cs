@@ -17,5 +17,10 @@ namespace FitnessProjectD3
         { 
         
         }
+
+        public override void CheckIn(Club club)
+        {
+            club.CheckIn(this);
+        }
     }
 }

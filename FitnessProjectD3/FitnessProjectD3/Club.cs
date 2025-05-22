@@ -56,6 +56,7 @@ public class Club
     
     private string _name;
     private string  _address;
+    private List<Member> _members = new List<Member>();
 
     public string Name { get { return _name; } set { _name = value; } }
     public string Address { get { return _address; } set { _address = value; } }
@@ -65,6 +66,25 @@ public class Club
         Name = name;
         Address = address;
     }
-    
-    
+
+    public void AddMember(Member member)
+    {
+        _members.Add(member);
+    }
+
+    public void CheckIn(Member member)
+    {
+        if (_members.Contains(member))
+        {
+            member._isCheckedIn = true;
+        }
+    }
+
+    public void CheckOut(Member member)
+    {
+        if (member._isCheckedIn == true)
+        {
+            member._isCheckedIn = false;
+        }
+    }
 }
