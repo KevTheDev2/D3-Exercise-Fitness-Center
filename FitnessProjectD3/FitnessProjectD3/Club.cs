@@ -54,6 +54,7 @@ public class Club
      * 
      */
     
+    
     private string _name;
     private string  _address;
     private List<Member> _members = new List<Member>();
@@ -67,6 +68,10 @@ public class Club
         Address = address;
     }
 
+    /*********************************************
+                    Helper Methods
+     *********************************************/
+    
     public void AddMember(Member member)
     {
         _members.Add(member);
@@ -87,4 +92,40 @@ public class Club
             member._isCheckedIn = false;
         }
     }
-}
+
+    public void RemoveMember(Member member)
+    {
+        _members.Remove(member);
+    }
+
+    public void ListAllMemberInformation(Club club)
+    {
+        foreach (Member member in _members)
+        {
+            // I need to make this look better in the ToString()
+            Console.WriteLine(member.ToString());
+        }
+    }
+
+    public void ListMemberInformation(Member member, Club club)
+    {
+        // Do I need the Club information here if the List is now just a list of all members
+        // Are the Clubs going to have a list of information which are going to be different based on the club
+        Console.WriteLine();
+    }
+
+    public void CheckMember(Member member, Club club)
+    {
+        if (member._isCheckedIn == true)
+        {
+            // Does it matter if they are checked in?
+            // Is the information going to change if they are checked into a different club?
+        }
+    }
+
+    public void GenerateFees(Member member)
+    {
+        // no idea yet
+    }
+
+} // End of Club class
