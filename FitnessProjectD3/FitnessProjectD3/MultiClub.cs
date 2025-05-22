@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace FitnessProjectD3
 {
-    class MultiClub
+    class MultiClub : Member
     {
-        
+        MultiClub multiClub1 = new MultiClub();
+
+      
+
+        public MultiClub()
+        {
+
+        }
     }
+  
+
 }

@@ -9,9 +9,9 @@ namespace FitnessProjectD3
     
     class SingleClub : Member
     {
-        SingleClub singleClub1 = new SingleClub(true);
+        SingleClub singleClub1 = new SingleClub();
 
-        public bool singleClub = true;
+        
 
     public SingleClub()
         { 
