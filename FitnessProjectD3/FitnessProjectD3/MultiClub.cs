@@ -9,13 +9,15 @@ namespace FitnessProjectD3
     class MultiClub : Member
     {
         MultiClub multiClub1 = new MultiClub();
-
+        
 
 
         public MultiClub()
         {
 
         }
+
+        
 
         public override void CheckIn(Club club)
         {
