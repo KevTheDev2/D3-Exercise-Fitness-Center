@@ -20,7 +20,6 @@ class Program
         {
             Console.WriteLine(club.Name);
         }
-        Console.WriteLine(clubList);
         
         //Ask the user if they want to select a club
         Console.WriteLine("What club would you like to select?");
