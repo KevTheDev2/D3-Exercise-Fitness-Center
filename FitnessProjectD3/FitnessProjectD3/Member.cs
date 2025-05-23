@@ -2,10 +2,19 @@ namespace FitnessProjectD3;
 
 public abstract class Member
 {
-    public int _id { get; set; }
+    /********************************************
+     * Member variables
+     ********************************************/
+    public int _id { get; set; }//A generate id method should be in the ctr for singleclub and multiclub
     public string _name { get; set; }
     public bool _isCheckedIn { get; set; }
+    public int _membershipPoints { get; set; }
+    public double _monthlyFee { get; set; } //SingleClub and MultiClub should set a default fee
     
+    //The club class will be able to add that fee to the member
     
+    /********************************************
+     * Member Method
+     ********************************************/
     public abstract void CheckIn(Club club);
 }
