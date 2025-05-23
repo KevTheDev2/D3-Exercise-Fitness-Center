@@ -10,13 +10,16 @@ namespace FitnessProjectD3
     {
         MultiClub multiClub1 = new MultiClub();
 
-      
+
 
         public MultiClub()
         {
 
         }
-    }
-  
 
+        public override void CheckIn(Club club)
+        {
+            club.CheckIn(this);
+        }
+    }
 }
