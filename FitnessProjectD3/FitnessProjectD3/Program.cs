@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(---------------------------"Start Program------------------------");
+        Console.WriteLine("---------------------------Start Program------------------------");
         
         //Create list of clubs in program or have the list exist in the club class
         List<Club> clubList = new List<Club>();
@@ -39,6 +39,6 @@ class Program
         
         
         
-        Console.WriteLine(---------------------------"End Program--------------------------");
+        Console.WriteLine("---------------------------End Program--------------------------");
     }
 }
