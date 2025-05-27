@@ -5,12 +5,9 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("---------------------------Start Program------------------------");
-<<<<<<< HEAD
-=======
         
         //We need to make the club member
         // Get name and set checked in to false
->>>>>>> 78a2c279a8b1b033a14b2c86485648943e7f7e8c
         
         //Create list of clubs in program or have the list exist in the club class
         List<Club> clubList = new List<Club>();
