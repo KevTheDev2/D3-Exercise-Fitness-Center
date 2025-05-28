@@ -8,7 +8,11 @@ class Program
         
         //We need to make the club member
         // Get name and set checked in to false
+<<<<<<< HEAD
+        
+=======
 
+>>>>>>> d3cbd3ddcf65fa1ad93da550e3048aa74fccc888
         //Create list of clubs in program or have the list exist in the club class
         List<Club> clubList = new List<Club>();
         clubList.Add(new Club("Club 1", "1234567890"));
