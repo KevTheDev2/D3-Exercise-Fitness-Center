@@ -23,21 +23,21 @@ namespace FitnessProjectD3
        public List<Club> multiClubs { get; set; } = new List<Club>();
         //public int _addMultiPoints { get; set; }
  
-        public int _totalPoints { get; set; }
+        //public int _totalPoints { get; set; }
 
         // Define constructor to initialize the class 
         // We need data required by the superclass and date for the the sub class
         public MultiClubMember(Club aClub, int id, String name, int monthlyFee) : base(id, name, monthlyFee) // we're sending data the super class needs to the super contructor
         {
             multiClubs.Add(aClub);
-            _totalPoints = 0;  
+            _membershipPoints = 0;  
 
         }
 
         public MultiClubMember(Club aClub, int id, String name, int monthlyFee, bool isCheckedIn) : base(id, name, monthlyFee, isCheckedIn) // we're sending data the super class needs to the super contructor
         {
             multiClubs.Add(aClub);
-            _totalPoints = 1;
+            _membershipPoints = 1;
 
 
         }
@@ -46,8 +46,9 @@ namespace FitnessProjectD3
         {
 
 
-            aMember._membershipPoints = _totalPoints += 1;
-            return _totalPoints;
+            return aMember._membershipPoints += 1;
+
+            
         }
 
 
