@@ -77,6 +77,7 @@ public class Club
     public void AddMember(Member member)
     {
         _members.Add(member);
+        Console.WriteLine($"You have succesfully added {member._name} to the Club.");
     }
 
     public void CheckIn(Member member)
@@ -93,36 +94,41 @@ public class Club
         {
             member._isCheckedIn = false;
         }
+        else
+        {
+            Console.WriteLine("You are not checked into a club.");
+        }
     }
 
     public void RemoveMember(Member member)
     {
         _members.Remove(member);
+        Console.WriteLine($"You have succesfully removed {member._name} from the Club.");
     }
 
     public void ListAllMemberInformation(Club club)
     {
         foreach (Member member in _members)
         {
-            // I need to make this look better in the ToString()
             Console.WriteLine(member.ToString());
         }
     }
 
-    public void ListMemberInformation(Member member, Club club)
+    public void ListMemberInformation(Member member)
     {
-        // Do I need the Club information here if the List is now just a list of all members
-        // Are the Clubs going to have a list of information which are going to be different based on the club
-        Console.WriteLine();
+        if (member.GetType() == typeof(SingleClubMember))
+        {
+            Console.WriteLine($"");
+        }
+        else if (member.GetType() == typeof(MultiClubMember))
+        {
+            Console.WriteLine($"");
+        }
     }
 
-    public void CheckMember(Member member, Club club)
+    public void CheckMember(Member member)
     {
-        if (member._isCheckedIn == true)
-        {
-            // Does it matter if they are checked in?
-            // Is the information going to change if they are checked into a different club?
-        }
+        Console.WriteLine($"{member._name} is a member of: "); // Find a way to get what club the member is apart of
     }
 
     public void GenerateFees(Member member)
