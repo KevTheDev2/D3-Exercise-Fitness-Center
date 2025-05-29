@@ -35,11 +35,11 @@ public class Club
      *
      *  AddMember(SingleCLub member) { };
      *  AddMember(MultiClub member) { };
-     *  AddMember(Member member) {}; makes more sense because its adding anyone of that super class (same with all other methods with members as parameters)
+     *  AddMember(Member member) { }; makes more sense because its adding anyone of that super class (same with all other methods with members as parameters)
      *
      *  RemoveMember(SingleClub member) { };
      *  RemoveMember(MultiClub member) { };
-     *  RemoveMember(Member member) {};
+     *  RemoveMember(Member member) { };
      *
      *  This Method takes in a member and a club to list the information for the member of said club
      *  ListMemberInformation(Member member) { }; List the member information of the member
