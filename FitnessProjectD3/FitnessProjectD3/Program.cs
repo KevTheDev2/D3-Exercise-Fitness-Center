@@ -23,16 +23,19 @@ class Program
         //Ask the user if they want to select a club
         Console.WriteLine("What club would you like to select?");
         string clubName = (Console.ReadLine().ToUpper());
-        
-        
+
+
         //Ask the user if they want to chekin
         //Make a list for the club the lets you add a member
         //add the member to clubName list
         //Set checked in to true
-        
+
         //Ask user if they want to select a club
-        
-        
+
+        SingleClubMember aSingleClubMember = new SingleClubMember(clubList[0].Name, 2, "Kay", 15);
+        SingleClubMember aSingleClubMember2 = new SingleClubMember(clubList[1].Name, 3, "Jay", 15, true);
+        Console.WriteLine(aSingleClubMember);
+        Console.WriteLine(aSingleClubMember2);
         
         
         
