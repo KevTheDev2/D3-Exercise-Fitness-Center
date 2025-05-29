@@ -42,7 +42,7 @@ namespace FitnessProjectD3
 
         }
 
-        public int AddMultiPoints(Member aMember)
+       /* public int AddMultiPoints(Member aMember)
         {
 
 
@@ -50,7 +50,7 @@ namespace FitnessProjectD3
 
             
         }
-
+*/
 
 
 
@@ -59,6 +59,7 @@ namespace FitnessProjectD3
         public override void CheckIn(Club club)
         {
             club.CheckIn(this);
+            _membershipPoints += 1;
         }
     }
 }

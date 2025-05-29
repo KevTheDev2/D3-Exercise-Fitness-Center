@@ -43,7 +43,14 @@ namespace FitnessProjectD3
         
         public override void CheckIn(Club club)
         {
-            club.CheckIn(this);
+            try
+            {
+                club.CheckIn(this);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("This member does not belong to that club");
+            }
         }
         
     }
