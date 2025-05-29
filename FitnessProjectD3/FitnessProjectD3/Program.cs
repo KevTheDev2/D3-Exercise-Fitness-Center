@@ -14,15 +14,29 @@ class Program
         clubList.Add(new Club("Club 2", "1234567890"));
         clubList.Add(new Club("Club 3", "1234567890"));
         clubList.Add(new Club("Club 4", "1234567890"));
+        clubList.Add(new Club("Club 5", "1234567890"));
+        clubList.Add(new Club("Club 6", "1234567890"));
+        clubList.Add(new Club("Club 7", "1234567890"));
+        clubList.Add(new Club("Club 8", "1234567890"));
+        clubList.Add(new Club("Club 9", "1234567890"));
+        
+        //Create single club members
+        SingleClubMember Frank = new SingleClubMember(clubList[0].Name, 1, "Frank", 15);
+        SingleClubMember Jay = new SingleClubMember(clubList[1].Name, 2, "Jay", 15, true);
+        
+        //Create multi club members
+        MultiClubMember Kay = new MultiClubMember(clubList[0], 1, "Kay", 25);
+        MultiClubMember Jess = new MultiClubMember(clubList[1], 2, "Jess", 25, true);
+        
         //Show list of clubs
-        foreach (var club in clubList)
+        for(int i = 0; i < clubList.Count; i++)
         {
-            Console.WriteLine(club.Name);
+            Console.WriteLine($"{i}: {clubList[i].Name}");
         }
         
         //Ask the user if they want to select a club
-        Console.WriteLine("What club would you like to select?");
-        string clubName = (Console.ReadLine().ToUpper());
+        Console.WriteLine("What club number would you like to select?");
+        int clubChoice = (int.Parse(Console.ReadLine()));
 
 
         //Ask the user if they want to chekin
@@ -32,11 +46,12 @@ class Program
 
         //Ask user if they want to select a club
 
+        /*
         SingleClubMember aSingleClubMember = new SingleClubMember(clubList[0].Name, 2, "Kay", 15);
         SingleClubMember aSingleClubMember2 = new SingleClubMember(clubList[1].Name, 3, "Jay", 15, true);
         Console.WriteLine(aSingleClubMember);
         Console.WriteLine(aSingleClubMember2);
-        
+        */
         
         
         
