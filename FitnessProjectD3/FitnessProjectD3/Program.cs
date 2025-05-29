@@ -21,12 +21,12 @@ class Program
         clubList.Add(new Club("Club 9", "1234567890"));
         
         //Create single club members
-        SingleClubMember Frank = new SingleClubMember(clubList[0].Name, 1, "Frank", 15);
-        SingleClubMember Jay = new SingleClubMember(clubList[1].Name, 2, "Jay", 15, true);
+        SingleClubMember frank = new SingleClubMember(clubList[0].Name, 1, "Frank", 15);
+        SingleClubMember jay = new SingleClubMember(clubList[1].Name, 2, "Jay", 15, true);
         
         //Create multi club members
-        MultiClubMember Kay = new MultiClubMember(clubList[0], 1, "Kay", 25);
-        MultiClubMember Jess = new MultiClubMember(clubList[1], 2, "Jess", 25, true);
+        MultiClubMember kay = new MultiClubMember(clubList[0], 1, "Kay", 25);
+        MultiClubMember jess = new MultiClubMember(clubList[1], 2, "Jess", 25, true);
         
         //Show list of clubs
         for(int i = 0; i < clubList.Count; i++)
@@ -34,10 +34,46 @@ class Program
             Console.WriteLine($"{i}: {clubList[i].Name}");
         }
         
+        
+        // Add members to club
+        clubList[0].AddMember(frank);
+        clubList[1].AddMember(jay);
+        clubList[0].AddMember(kay);
+        clubList[1].AddMember(jess);
+        
+        //Checkin members
+        frank.CheckIn(clubList[0]);
+        jay.CheckIn(clubList[1]);
+        kay.CheckIn(clubList[0]);
+        jess.CheckIn(clubList[1]);
+      
+        clubList[0].CheckIn(frank);
+        clubList[1].CheckIn(jay);
+        clubList[0].CheckIn(kay);
+        clubList[1].CheckIn(jess);
+        
+        //Check if member is in club
+        clubList[0].CheckMember(frank);
+        clubList[1].CheckMember(jay);
+        clubList[0].CheckMember(kay);
+        clubList[1].CheckMember(jess);
+        
+        
+        //Generate fees and points
+        
+        //Check members out of club
+        clubList[0].CheckOut(frank);
+        clubList[1].CheckOut(jay);
+        clubList[0].CheckOut(kay);
+        clubList[1].CheckOut(jess);
+        
+        
         //Ask the user if they want to select a club
         Console.WriteLine("What club number would you like to select?");
         int clubChoice = (int.Parse(Console.ReadLine()));
 
+        //Check member into that selection
+        kay.CheckIn(clubList[clubChoice]);
 
         //Ask the user if they want to chekin
         //Make a list for the club the lets you add a member
